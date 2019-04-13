@@ -2,6 +2,7 @@ package spms.controls;
 
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import spms.bind.DataBinding;
@@ -12,6 +13,7 @@ import spms.vo.Member;
 public class MemberUpdateController implements Controller, DataBinding {
 	MySqlMemberDao memberDao;
 	
+	@Autowired
 	public MemberUpdateController setMemberDao(MySqlMemberDao memberDao) {
 		this.memberDao = memberDao;
 		return this;

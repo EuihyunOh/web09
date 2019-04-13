@@ -2,6 +2,7 @@ package spms.controls;
 
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import spms.bind.DataBinding;
@@ -12,6 +13,7 @@ import spms.vo.Project;
 public class ProjectAddController implements Controller, DataBinding {
 	MySqlProjectDao projectDao;
 	
+	@Autowired
 	public ProjectAddController setProjectDao(MySqlProjectDao projectDao) {
 		this.projectDao = projectDao;
 		return this;

@@ -3,6 +3,7 @@ package spms.controls;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import spms.bind.DataBinding;
@@ -13,6 +14,7 @@ public class MemberListController implements Controller, DataBinding{
 
 	MySqlMemberDao memberDao;
 		
+	@Autowired
 	public MemberListController setMemberDao(MySqlMemberDao memberDao) {
 		this.memberDao = memberDao;
 		return this;

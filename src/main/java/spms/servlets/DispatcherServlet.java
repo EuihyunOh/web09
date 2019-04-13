@@ -17,6 +17,7 @@ import spms.bind.ServletRequestDataBinder;
 import spms.controls.Controller;
 import spms.listeners.ContextLoaderListener;
 
+@SuppressWarnings("serial")
 @WebServlet("*.do")
 public class DispatcherServlet extends HttpServlet {
 	@Override
